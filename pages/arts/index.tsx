@@ -12,7 +12,7 @@ export default function Arts() {
         mb={["", "", "", "", "38px", "46px"]}
       >
         {
-          artInfo.map((art, i) => <Content key={i} />)
+          artInfo.map((art, i) => <Content art={art}  key={i} />)
         }
       </Box>
       <Flex
