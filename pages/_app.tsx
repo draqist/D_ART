@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AnimatePresence exitBeforeEnter>
       <ChakraProvider theme={theme}>
-        <Fonts />
+        {/* <Fonts /> */}
         <Component {...pageProps} />
       </ChakraProvider>
     </AnimatePresence>

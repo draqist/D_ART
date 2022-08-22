@@ -22,18 +22,16 @@ a {
   width: 0px;
 }
 @font-face {
-  font-family: "Monument Extended";
+  font-family: "Bon Foyage Demo";
   font-style: normal;
   font-weight: 400;
-  src: local("Monument Extended"),
-    url("https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff")
-      format("woff");
+  src: url("/fonts/Bon Foyage Demo.ttf")
+      format("ttf");
 }
 @font-face {
-  font-family: "Monument Extended";
+  font-family: "Bon Foyage Demo";
   font-style: normal;
   font-weight: 700;
-  src: local("Monument Extended"),
-    url("https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff")
-      format("woff");
+  src: url("/fonts/Bon Foyage Demo.ttf")
+      format("ttf");
 }
