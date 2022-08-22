@@ -25,13 +25,13 @@ a {
   font-family: "Bon Foyage Demo";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/Bon Foyage Demo.ttf")
-      format("ttf");
+  src: url("/fonts/Bon Foyage Demo.ttf") format("truetype");
+  color: red;
+
 }
 @font-face {
   font-family: "Bon Foyage Demo";
   font-style: normal;
-  font-weight: 700;
-  src: url("/fonts/Bon Foyage Demo.ttf")
-      format("ttf");
+  font-weight: 00;
+  src: url("/fonts/Bon Foyage Demo.otf") format("opentype");
 }

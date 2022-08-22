@@ -17,6 +17,6 @@ export const theme = extendTheme({
   },
   fonts: {
     heading: `"Bon Foyage Demo", sans-serif`,
-    body: `"DM Sans","TT Hoves", sans-serif`,
+    body: `"DM Sans",sans-serif`,
   },
 });
