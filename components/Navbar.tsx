@@ -1,12 +1,34 @@
 import { Box, Flex, HStack, Image, Link, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 const Navbar = () => {
+  const navRef = useRef(null)
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [text, setText] = useState('black')
+  const [toggle, setToggle] = useState(false)
+const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+    if (scrollPosition >= 50) {
+      setText('#f34c68')
+      setToggle(true)
+    } else if (scrollPosition < 170) {
+      setText('black')
+      setToggle(false)
+    } else {
+      return
+    }
+};
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    console.log(scrollPosition)
+  }, [handleScroll])
   return (
     <Flex
       alignItems="center"
       justifyContent="space-between"
-      fontWeight="700"
+      fontWeight="900"
       fontSize="18px"
       textTransform="uppercase"
       w={[
@@ -17,8 +39,11 @@ const Navbar = () => {
         "calc(100% - 140px)",
         "calc(100% - 270px)",
       ]}
-      // pos="fixed"
+      ref={navRef}
       zIndex="3"
+      color={text}
+      backdropFilter= {toggle ? 'blur(1px)' : ''}
+bgColor = 'transparent'
     >
       <Box>
         <NextLink href="/" passHref>

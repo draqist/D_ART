@@ -26,7 +26,7 @@ a {
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/Bon Foyage Demo.ttf") format("truetype");
-  color: red;
+  /* color: #fa8095; */
 
 }
 @font-face {
