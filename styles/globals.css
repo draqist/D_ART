@@ -6,6 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
   min-height: 100vh;
+  cursor: url("/cursoar.jpg"),auto !important;
 }
 
 a {
@@ -15,6 +16,7 @@ a {
 
 * {
   box-sizing: border-box;
+  /* cursor: url('/cursoar.cur'); */
 }
 ::-webkit-scrollbar {
   width: 0px;

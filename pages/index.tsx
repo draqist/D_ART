@@ -11,7 +11,7 @@ export default function Home() {
         pt={["", "", "", "", "140px", "168px"]}
         mb={["", "", "", "", "38px", "46px"]}
       >
-        <Content />
+        {/* <Content /> */}
       </Box>
       <Flex
         textTransform="uppercase"

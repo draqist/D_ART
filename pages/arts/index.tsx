@@ -6,7 +6,9 @@ import { artInfo } from "../../data";
 export default function Arts() {
   return (
     <Box>
-      <Navbar />
+      <Box pos='fixed' w='100%'>
+        <Navbar />
+      </Box>
       <Box
         pt={["", "", "", "", "100px", "168px"]}
         mb={["", "", "", "", "38px", "46px"]}
