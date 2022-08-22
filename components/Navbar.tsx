@@ -54,7 +54,7 @@ bgColor = 'transparent'
       </Box>
       <HStack alignItems="center">
         <Image src="/Group 4.svg" alt="company logo" />{" "}
-        <Text as="span"> 313 NET</Text>
+        <Text as="span"> 313.ART</Text>
       </HStack>
       <Box>
         <NextLink href="/arts" passHref>
