@@ -23,11 +23,12 @@ const Content = (props: any) => {
           <NextLink href={"/arts/" + id} passHref>
             <Link href="">
               <Heading
-                fontWeight="400"
-                fontSize={["30px", "", "32px", "40px", "80px", "120px"]}
+                fontWeight={["500",'', '500']}
+                fontSize={["34px", "", "32px", "40px", "80px", "120px"]}
                 lineHeight={["22px", "", "28px", "34px", "70px", "96px"]}
                 // textTransform='lowercase'
                 display="inline"
+
               >
                 {" "}
                 {art_name + " " + art_name_cut}

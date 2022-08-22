@@ -35,7 +35,7 @@ export default function Home() {
             alignItems="center"
           >
             <Heading
-              fontWeight="400"
+              fontWeight="500"
               fontSize={["45px", "", "60px", "80px", "150px", "180px"]}
             >
               {" "}

@@ -40,7 +40,7 @@ const SubArts = ({ data }: any) => {
         overflow="hidden"
       >
         <Heading
-          fontWeight="400"
+          fontWeight="500"
           fontSize={["30px", "", "32px", "40px", "80px", "120px"]}
           lineHeight={["22px", "", "28px", "34px", "70px", "96px"]}
           // textTransform='lowercase'
