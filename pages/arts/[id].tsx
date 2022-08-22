@@ -63,7 +63,7 @@ const SubArts = ({ data }: any) => {
             initial={{ scale: 1 }}
             whileInView={{
               scale: [1, 3, 1],
-              transition: { ease: "easeInOut", duration: 15, repeat: 0 },
+              transition: { ease: "easeInOut", duration: 15, repeat: Infinity, delay:2, repeatDelay: 4 },
             }}
             whileHover={{
               y: [0, -100, -200, -300, -400, -474, -400, -300, -200, -100, 0],
