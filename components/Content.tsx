@@ -1,78 +1,119 @@
-import { Box, Collapse, Flex, Heading, HStack, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Collapse,
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import NextLink from 'next/link';
+import NextLink from "next/link";
 import { useState } from "react";
 
 const Content = (props: any) => {
-  const {id, art_name, art_name_cut, art_info, artiste, image,} = props.art
-  const [show, setShow] = useState(false)
-  const handleToggle = () => setShow(!show)
+  const { id, art_name, art_name_cut, art_info, artiste, image } = props.art;
+  const [show, setShow] = useState(false);
+  const handleToggle = () => setShow(!show);
   return (
     <Box w="100%">
       <Flex justifyContent="space-between" alignItems="center">
         <HStack spacing="37px" alignItems="center">
-          <Heading
-            fontWeight="400"
-            fontSize={["", "", "", "", "80px", "180px"]}
-            lineHeight='70px'
-            // textTransform='lowercase'
-            display='inline'
-          >
-            {" "}
-            {art_name + ' ' + art_name_cut} 
-            <Text as='span'> - {artiste} </Text>
-          </Heading>
-          <HStack>
-            <Box lineHeight="24px">
-              {/* <Text>
-                We are an award-winning digital production studio based in
-                Sweden specialising in CGI, Animation, Design and Retouching or
-                dynamic levels 3D.
-              </Text> */}
-              {/* <Text fontSize='18px' fontWeight='400' mt='16px'>{artiste} </Text> */}
-            </Box>
-          </HStack>
-        </HStack>
-        <HStack spacing="30px">
-          {/* <Image src="/Iconweb.png" alt="graphics" />
-          <Box>
-            <Image src="/serialInfo.png" alt="serial identity" mb="24px" />
-            <Image src="/qrcode.png" alt="QR code" />
-          </Box> */}
+          <NextLink href={"/arts/" + id} passHref>
+            <Link href="">
+              <Heading
+                fontWeight="400"
+                fontSize={["30px", "", "32px", "40px", "80px", "120px"]}
+                lineHeight={["22px", "", "28px", "34px", "70px", "96px"]}
+                // textTransform='lowercase'
+                display="inline"
+              >
+                {" "}
+                {art_name + " " + art_name_cut}
+                <Text as="span"> - {artiste} </Text>
+              </Heading>
+            </Link>
+          </NextLink>
         </HStack>
       </Flex>
-      <Collapse startingHeight='290px' in={show}>
-        <Box
-          h={["", "", "", "", "560px", "610px"]}
-          w="100%"
-          pb="46px"
-          overflow="hidden"
-          mt="37px"
-          >
-          <Image
-            as={motion.img}
-            initial={{ scale: 1 }}
-            whileInView={{
-              scale: [1, 4, 1],
-              transition: { duration: 30, repeat: Infinity, repeatDelay: id + 7 },
-            }}
-            src={image}
-            alt="image"
+      <Box overflow="hidden" display={["none", "none", "block"]}>
+        <Collapse startingHeight={"400px"} in={show}>
+          <Box
+            h={["", "", "", "", "500px", "610px"]}
             w="100%"
-            h="100%"
-            objectFit="cover"
-            objectPosition="center"
-            onClick={handleToggle}
-            mb='60px'
-          />
-        </Box>
-      </Collapse>
-      <Flex justifyContent='space-between' pt={['','','','','10px','60px']}  borderBottom='1px solid ' pb='10px' mb='40px'>
+            pb={["0", "", "46px"]}
+            overflow="hidden"
+            mt="37px"
+          >
+            <Image
+              as={motion.img}
+              initial={{ scale: 1, opacity: 0.75 }}
+              whileInView={{
+                scale: [1, 4, 1],
+                opacity: 1,
+                transition: {
+                  ease: "easeInOut",
+                  duration: 30,
+                  repeat: Infinity,
+                  // delay: id,
+                  repeatDelay: id + 7,
+                },
+              }}
+              src={image}
+              alt="image"
+              w="100%"
+              h="100%"
+              objectFit="cover"
+              objectPosition="center"
+              onClick={handleToggle}
+              mb={["20px", "", "60px"]}
+            />
+          </Box>
+        </Collapse>
+      </Box>
+      <Box
+        h={["", "", "", "", "500px", "610px"]}
+        w="100%"
+        pb={["0", "", "46px"]}
+        overflow="hidden"
+        mt="37px"
+        display={["block, block", "none"]}
+      >
+        <Image
+          as={motion.img}
+          initial={{ scale: 1, opacity: 0.75 }}
+          whileInView={{
+            scale: [1, 4, 1],
+            opacity: 1,
+            transition: {
+              ease: "easeInOut",
+              duration: 30,
+              repeat: Infinity,
+              // delay: id,
+              repeatDelay: id + 7,
+            },
+          }}
+          src={image}
+          alt="image"
+          w="100%"
+          h="100%"
+          objectFit="cover"
+          objectPosition="center"
+          onClick={handleToggle}
+          mb={["20px", "", "60px"]}
+        />
+      </Box>
+      <Flex
+        justifyContent="space-between"
+        pt={["20px", "", "20px", "", "10px", "60px"]}
+        borderBottom="1px solid "
+        pb="10px"
+        mb={["30px", "", "20px", "40px", "38px", "46px"]}
+      >
         <Text></Text>
         <NextLink href={`/arts/${id}`} passHref>
-          <Link href=''>
-            View Detail
-          </Link>
+          <Link href="">View Detail</Link>
         </NextLink>
       </Flex>
     </Box>

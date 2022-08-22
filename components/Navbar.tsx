@@ -1,5 +1,5 @@
 import { Box, Flex, HStack, Image, Link, Text } from "@chakra-ui/react";
-import NextLink from 'next/link'
+import NextLink from "next/link";
 
 const Navbar = () => {
   return (
@@ -9,13 +9,20 @@ const Navbar = () => {
       fontWeight="700"
       fontSize="18px"
       textTransform="uppercase"
-      w="calc(100% - 140px )"
+      w={[
+        "calc(100% - 40px)",
+        "",
+        "calc(100% - 80px)",
+        "",
+        "calc(100% - 140px)",
+        "calc(100% - 270px)",
+      ]}
       // pos="fixed"
       zIndex="3"
     >
       <Box>
         <NextLink href="/" passHref>
-          <Link href=''>
+          <Link href="">
             <Text> home </Text>
           </Link>
         </NextLink>
@@ -26,10 +33,10 @@ const Navbar = () => {
       </HStack>
       <Box>
         <NextLink href="/arts" passHref>
-            <Link href=''>
-              <Text> arts </Text>
-            </Link>
-          </NextLink>
+          <Link href="">
+            <Text> arts </Text>
+          </Link>
+        </NextLink>
       </Box>
     </Flex>
   );
